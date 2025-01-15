@@ -24,7 +24,7 @@ pipeline {
 
                         // Install Terraform based on the OS
                         sh """
-                            apt-get install terraform
+                            sudo apt-get install terraform
                             terraform -version
                         """
                     } else {
