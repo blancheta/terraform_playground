@@ -21,6 +21,8 @@
 #
 #echo $decrypted_content
 
+apt-get install terraform
+
 # Get subscription id
 subscription_id=$(az account show --query id)
 subscription_id=$(echo $subscription_id | jq -r)
