@@ -24,7 +24,9 @@ pipeline {
 
                         // Install Terraform based on the OS
                         sh """
-                            sudo apt-get install terraform
+                            curl -fsSL https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o terraform.zip
+                            unzip terraform.zip
+                            mv terraform /usr/local/bin/
                             terraform -version
                         """
                     } else {
