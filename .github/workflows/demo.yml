@@ -15,6 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.choice }} == "yes"
     steps:
-      - name: Print the username
+      - name: Print username
         run: |
           echo "The username selected option: ${{ inputs.choice }}"
