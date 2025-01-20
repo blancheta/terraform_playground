@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: Print username
         run: |
-          echo "The username selected option: ${{github.event.inputs.choice }}"
+          echo "The username selected option: ${{inputs.choice }}"
