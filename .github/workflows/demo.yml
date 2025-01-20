@@ -4,8 +4,8 @@ on:
   push:
   workflow_dispatch:
     inputs:
-      username:
-        description: 'select user'
+      choice:
+        description: 'Deploy to Production?'
         default: ''
         required: true
         type: string
@@ -13,7 +13,8 @@ on:
 jobs:
   print-username:
     runs-on: ubuntu-latest
-
+    if: ${{ inputs.choice }} == "yes"
     steps:
       - name: Print the username
-        run: echo The username is ${{ inputs.username }}
+        run: |
+          echo "The username selected option: ${{ inputs.choice }}"
