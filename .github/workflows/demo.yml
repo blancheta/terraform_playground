@@ -1,11 +1,10 @@
 name: Manual Trigger Workflow with username
 #get username information
 on:
-  push:
   workflow_dispatch:
     inputs:
       choice:
-        description: 'Deploy to Production?'
+        description: 'Purpose of deployment'
         default: ''
         required: true
         type: string
