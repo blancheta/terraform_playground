@@ -13,7 +13,8 @@ jobs:
   print-project:
     runs-on: ubuntu-latest
     steps:
-      - name: Print project
+      - run: echo Print project
+
   print-username:
     runs-on: ubuntu-latest
     steps:
