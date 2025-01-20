@@ -13,8 +13,8 @@ on:
 jobs:
   print-username:
     runs-on: ubuntu-latest
-    if: ${{ inputs.choice }} == "yes"
+    if: ${{ github.event.inputs.choice }} == "yes"
     steps:
       - name: Print username
         run: |
-          echo "The username selected option: ${{ inputs.choice }}"
+          echo "The username selected option: ${{github.event.inputs.choice }}"
