@@ -14,7 +14,7 @@ jobs:
   print-project:
     runs-on: ubuntu-latest
     steps:
-      - run: echo Print project
+      - run: echo Print projectt
 
   print-username:
     runs-on: ubuntu-latest
